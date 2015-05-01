@@ -30,6 +30,11 @@ Example
 Changelog
 ---------
 
+**1.0.0**
+
+- Actual working code. Yay!
+
+
 **0.0.1**
 
 - Initial release.
