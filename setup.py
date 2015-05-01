@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='abduct',
-    version='1.0.0',
+    version='0.0.1',
     packages=('abduct',),
     url='https://github.com/themattrix/python-abduct',
     license='MIT',
