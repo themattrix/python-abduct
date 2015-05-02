@@ -1,5 +1,5 @@
 Abduct |Version| |Build| |Coverage| |Health|
-===================================================================
+============================================
 
 |Compatibility| |Implementations| |Format| |Downloads|
 
@@ -23,9 +23,9 @@ Installation:
     $ pip install abduct
 
 
-When stdout or stderr is captured, the related `sys.stdout` or
-`sys.stderr` object is replaced with a StringIO object for the life
-of the context.
+When stdout or stderr is captured, the related ``sys.stdout`` or
+``sys.stderr`` object is replaced with a ``StringIO`` object for the
+life of the context.
 
 
 Examples
@@ -59,6 +59,11 @@ is triggered.
 
 Changelog
 ---------
+
+**1.0.2**
+
+- Fixed README and description.
+
 
 **1.0.1**
 
