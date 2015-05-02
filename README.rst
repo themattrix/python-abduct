@@ -3,11 +3,17 @@ Abduct |Version| |Build| |Coverage| |Health|
 
 |Compatibility| |Implementations| |Format| |Downloads|
 
-Capture stdout/stderr and optionally release on exceptions.
+Capture stdout/stderr and optionally release when an exception occurs.
 
 .. code:: python
 
-    # TODO: add super short usage
+    from abduct import captured, stdout, stderr
+
+    with captured(stdout()) as out:
+        ...
+
+    with captured(stdout(), stderr()) as (out, err):
+        ...
 
 
 Installation:
@@ -16,19 +22,49 @@ Installation:
 
     $ pip install abduct
 
-.. TODO: longer description
+
+When stdout or stderr is captured, the related `sys.stdout` or
+`sys.stderr` object is replaced with a StringIO object for the life
+of the context.
 
 
-Example
--------
+Examples
+--------
+
+It's often useful to capture the output of a block of code. Abduct
+makes this easy:
 
 .. code:: python
 
-    # TODO: add example
+    with captured(stdout()) as out:
+        print('hello!')
+
+    assert out.getvalue() == 'hello!'
+
+
+Sometimes you may want to hide the output of some code *unless*
+something goes wrong. In this case, simply specify
+``release_on_exception=True``:
+
+.. code:: python
+
+    with captured(stdout(release_on_exception=True)):
+        if blow_up:
+            raise RuntimeError('Oh noes!')
+
+
+In this case, ``Oh noes!`` will be printed on stdout if ``blow_up``
+is triggered.
 
 
 Changelog
 ---------
+
+**1.0.1**
+
+- Travis config now defers to tox.
+- Added examples to README.
+
 
 **1.0.0**
 

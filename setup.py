@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='abduct',
-    version='1.0.0',
+    version='1.0.1',
     packages=('abduct',),
     url='https://github.com/themattrix/python-abduct',
     license='MIT',
@@ -11,7 +11,8 @@ setup(
     install_requires=(),
     tests_require=(),
     description=(
-        'Capture stdout/stderr and optionally release on exceptions.'),
+        'Capture stdout/stderr and optionally release when an exception'
+        'occurs.'),
     classifiers=(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',
