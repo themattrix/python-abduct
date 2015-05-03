@@ -60,6 +60,11 @@ is triggered.
 Changelog
 ---------
 
+**1.0.4**
+
+- Fixed Travis release criteria.
+
+
 **1.0.3**
 
 - Refactored test runner.
