@@ -18,7 +18,7 @@ Capture stdout/stderr and optionally release when an exception occurs.
 
 Installation:
 
-.. code:: shell
+.. code:: console
 
     $ pip install abduct
 
@@ -59,6 +59,11 @@ is triggered.
 
 Changelog
 ---------
+
+**1.0.3**
+
+- Refactored test runner.
+
 
 **1.0.2**
 
