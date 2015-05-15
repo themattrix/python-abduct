@@ -7,12 +7,12 @@ Capture stdout/stderr and optionally release when an exception occurs.
 
 .. code:: python
 
-    from abduct import captured, stdout, stderr
+    from abduct import captured, out, err
 
-    with captured(stdout()) as out:
+    with captured(out()) as stdout:
         ...
 
-    with captured(stdout(), stderr()) as (out, err):
+    with captured(out(), err()) as (stdout, stderr):
         ...
 
 
@@ -36,10 +36,10 @@ makes this easy:
 
 .. code:: python
 
-    with captured(stdout()) as out:
+    with captured(out()) as stdout:
         print('hello!')
 
-    assert out.getvalue() == 'hello!'
+    assert stdout.getvalue() == 'hello!'
 
 
 Sometimes you may want to hide the output of some code *unless*
@@ -48,17 +48,38 @@ something goes wrong. In this case, simply specify
 
 .. code:: python
 
-    with captured(stdout(release_on_exception=True)):
+    with captured(out(release_on_exception=True)):
+        print('Really important message!')
         if blow_up:
-            raise RuntimeError('Oh noes!')
+            raise RuntimeError()
 
 
-In this case, ``Oh noes!`` will be printed on stdout if ``blow_up``
-is triggered.
+In this case, ``Really important message!`` will be printed on
+``stdout`` if the exception is raised.
+
+If you'd like to capture the output, but still write through to
+``stdout`` or ``stderr``, use the ``tee=True`` parameter:
+
+.. code:: python
+
+    with captured(err(tee=True)) as stderr:
+        sys.stderr.write('Error!')
+
+    assert stderr.getvalue() == 'Error!'
+
+
+In this case, ``Error!`` is captured *and* written to ``stderr``
+at the same time.
 
 
 Changelog
 ---------
+
+**2.0.0**
+
+- Feature: "Create a write-through option for output."
+- Backwards-incompatible change: ``stdout`` and ``stderr`` methods are now ``out`` and ``err`` respectively.
+
 
 **1.0.4**
 
