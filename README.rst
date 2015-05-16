@@ -15,6 +15,9 @@ Capture stdout/stderr and optionally release when an exception occurs.
     with captured(out(), err()) as (stdout, stderr):
         ...
 
+    @captured(out(), err())
+    ...
+
 
 Installation:
 
@@ -74,6 +77,11 @@ at the same time.
 
 Changelog
 ---------
+
+**2.0.1**
+
+- Added tests for the decorator usage.
+
 
 **2.0.0**
 

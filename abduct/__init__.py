@@ -2,8 +2,8 @@ from contextlib2 import contextmanager, ExitStack
 from abduct.stream import stdout as out
 from abduct.stream import stderr as err
 
-capture_stdout = out  # pylint: disable=invalid-name
-capture_stderr = err  # pylint: disable=invalid-name
+captured_stdout = out  # pylint: disable=invalid-name
+captured_stderr = err  # pylint: disable=invalid-name
 
 
 @contextmanager

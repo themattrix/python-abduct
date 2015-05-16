@@ -2,13 +2,14 @@ from setuptools import setup
 
 setup(
     name='abduct',
-    version='2.0.0',
+    version='2.0.1',
     packages=('abduct',),
     url='https://github.com/themattrix/python-abduct',
     license='MIT',
     author='Matthew Tardiff',
     author_email='mattrix@gmail.com',
-    install_requires=(),
+    install_requires=(
+        'contextlib2',),
     tests_require=(),
     description=(
         'Capture stdout/stderr and optionally release when an exception '
