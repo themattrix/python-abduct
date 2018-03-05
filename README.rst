@@ -126,13 +126,13 @@ Changelog
    :target: https://coveralls.io/r/themattrix/python-abduct
 .. |Health| image:: https://landscape.io/github/themattrix/python-abduct/master/landscape.svg
    :target: https://landscape.io/github/themattrix/python-abduct/master
-.. |Version| image:: https://pypip.in/version/abduct/badge.svg?text=version
+.. |Version| image:: https://img.shields.io/pypi/v/abduct.svg?label=version
    :target: https://pypi.python.org/pypi/abduct
-.. |Downloads| image:: https://pypip.in/download/abduct/badge.svg
+.. |Downloads| image:: https://img.shields.io/pypi/dm/abduct.svg
    :target: https://pypi.python.org/pypi/abduct
-.. |Compatibility| image:: https://pypip.in/py_versions/abduct/badge.svg
+.. |Compatibility| image:: https://img.shields.io/pypi/pyversions/abduct.svg
    :target: https://pypi.python.org/pypi/abduct
-.. |Implementations| image:: https://pypip.in/implementation/abduct/badge.svg
+.. |Implementations| image:: https://img.shields.io/pypi/implementation/abduct.svg
    :target: https://pypi.python.org/pypi/abduct
-.. |Format| image:: https://pypip.in/format/abduct/badge.svg
+.. |Format| image:: https://img.shields.io/pypi/format/abduct.svg
    :target: https://pypi.python.org/pypi/abduct
